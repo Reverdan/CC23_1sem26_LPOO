@@ -1,4 +1,4 @@
-# Número Primo — Projeto NumeroPrimo
+﻿# Número Primo — Projeto NumeroPrimo
 
 Este projeto verifica se um número digitado pelo usuário é primo. Ele segue a mesma arquitetura do [projeto Aula1](AULA1.md) — pacotes `apresentacao` e `modelo`, padrões MVC e Facade, responsabilidade única e boas práticas — portanto esses conceitos não serão repetidos aqui.
 
@@ -59,7 +59,7 @@ A palavra-chave `abstract` indica que essa classe **não pode ser instanciada di
 | `numero` | `String` | O número digitado pelo usuário (texto bruto) |
 | `num` | `int` | O número após conversão para inteiro |
 | `mensagem` | `String` | Mensagem de erro, ou `""` se não houver erro |
-| `resposta` | `String` | `"É primo"` ou `"Não é primo"` |
+| `resposta` | `String` | `"Ã‰ primo"` ou `"Não é primo"` |
 
 ---
 
@@ -118,7 +118,7 @@ Com herança, os atributos são declarados **uma única vez** em `Propriedades` 
 public final class Primo extends Propriedades { ... }
 ```
 
-A palavra-chave `final` em uma classe significa que ela **não pode ser herdada** por nenhuma outra classe — ela encerra a cadeia de herança. É uma decisão de design que protege a implementação do algoritmo de verificação de primo contra modificações acidentais por subclasses.
+A palavra-chave `final` em uma classe significa que ela **não pode ser herdada** por nenhuma outra classe — ela encerra a cadeia de herança. Ã‰ uma decisão de design que protege a implementação do algoritmo de verificação de primo contra modificações acidentais por subclasses.
 
 ---
 
@@ -164,7 +164,7 @@ public Primo(int num)
 
 private void Executar()
 {
-    this.resposta = "É primo";
+    this.resposta = "Ã‰ primo";
     for (int i = 2; i < num / 2 + 1; i++)
     {
         if (num % i == 0)
@@ -215,7 +215,7 @@ private void Executar()
 ```
 
 - Recebe apenas **um parâmetro** (o número como texto), diferente do Aula1 que recebia três.
-- Orquestra a sequência: valida → verifica primo.
+- Orquestra a sequência: valida â†’ verifica primo.
 - Armazena o resultado em `this.resposta` (herdado) para a `frmPrincipal` recuperar via `getResposta()`.
 - Se houver erro, copia a mensagem de `Validacao` para `this.mensagem`.
 
@@ -261,3 +261,4 @@ A diferença de comportamento em relação ao Aula1:
 | Exibição de erros | No próprio `lblResultado` | `JOptionPane` (caixa de diálogo) |
 | Tipo numérico | `Double` (decimais) | `int` (inteiros) |
 | Parâmetros do `Controle` | 3 (`num1`, `num2`, `op`) | 1 (`numero`) |
+

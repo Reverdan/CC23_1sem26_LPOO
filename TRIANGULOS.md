@@ -1,4 +1,4 @@
-# Verificar Triângulos — Projeto VerificarTriangulos
+﻿# Verificar Triângulos — Projeto VerificarTriangulos
 
 Este projeto, além de validar e classificar triângulos, é um exemplo avançado de aplicação de técnicas de orientação a objetos (O.O.) e padrões de projeto em Java, indo além do que foi apresentado em AULA1 e PRIMO.
 
@@ -27,7 +27,7 @@ As classes `Controle`, `Validacao` e `Triangulos` sobrescrevem o método `verifi
 - O método `verificar()` é chamado automaticamente, garantindo que o objeto sempre esteja em estado válido.
 - O acesso aos resultados é feito por meio de atributos públicos ou métodos de acesso.
 
-### 5. Responsabilidade Única e Separação de Papéis
+### 5. Responsabilidade Ãšnica e Separação de Papéis
 Cada classe tem uma função clara:
 - `Validacao`: valida os dados de entrada (regra do triângulo).
 - `Triangulos`: classifica o tipo de triângulo.
@@ -87,3 +87,4 @@ O projeto VerificarTriangulos demonstra:
 - Estrutura extensível e de fácil manutenção.
 
 Essas práticas tornam o código robusto, flexível e preparado para evoluções futuras, servindo como referência para projetos orientados a objetos sofisticados e profissionais.
+

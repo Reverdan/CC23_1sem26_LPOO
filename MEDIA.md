@@ -1,4 +1,4 @@
-# Média — Projeto Media
+﻿# Média — Projeto Media
 
 O projeto Media calcula a média de notas de um aluno, considerando NP1, NP2 e exame, e determina sua situação (Aprovado, Exame ou Reprovado). Ele utiliza técnicas intermediárias e avançadas de orientação a objetos (O.O.) e padrões de projeto para garantir organização, reuso, extensibilidade e robustez.
 
@@ -47,13 +47,13 @@ O polimorfismo permite que o método correto seja chamado conforme o tipo do obj
 - O método `Executar()` é chamado automaticamente nos construtores, garantindo que o objeto sempre esteja em estado válido logo após ser criado.
 - O acesso aos resultados é feito por meio de métodos de acesso (`getMensagem()`, `toString()`), promovendo encapsulamento.
 
-### 5. Responsabilidade Única e Separação de Papéis
+### 5. Responsabilidade Ãšnica e Separação de Papéis
 Cada classe tem uma função clara e única:
 - `Validacao`: valida as notas e converte para o tipo correto.
 - `Media`: realiza o cálculo da média e determina a situação do aluno.
 - `Controle`: coordena o fluxo, decide se pode calcular ou se há erro.
 
-Essa separação facilita testes, manutenção e evolução do sistema, seguindo o princípio SOLID da Responsabilidade Única.
+Essa separação facilita testes, manutenção e evolução do sistema, seguindo o princípio SOLID da Responsabilidade Ãšnica.
 
 ### 6. Extensibilidade e Reuso (Open/Closed)
 - Novas regras de validação ou cálculo podem ser adicionadas facilmente, bastando criar novas subclasses de `AbsPropriedades`.

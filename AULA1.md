@@ -1,4 +1,4 @@
-# Aula 1 — Projeto aula1Visual
+﻿# Aula 1 — Projeto aula1Visual
 
 Este projeto implementa uma calculadora com interface gráfica em Java (Swing), demonstrando os conceitos de separação de responsabilidades, comunicação entre classes e organização em camadas.
 
@@ -32,7 +32,7 @@ Essa separação garante que a interface gráfica **não sabe como calcular**, e
 
 ---
 
-## Conceito de Responsabilidade Única
+## Conceito de Responsabilidade Ãšnica
 
 Cada classe tem **uma única razão para existir e mudar**:
 
@@ -104,7 +104,7 @@ public Double getResultado()
 
 Isso impede que outras classes modifiquem os dados internamente de forma não controlada. Só é possível **ler** o resultado, não alterá-lo diretamente.
 
-### Métodos Curtos e com Propósito Único
+### Métodos Curtos e com Propósito Ãšnico
 
 Nenhum método deste projeto faz mais do que uma coisa. O método `calcular()` em `Calculos` apenas realiza a operação. O método `validar()` em `Validacao` apenas verifica os dados. O método `executar()` em `Controle` apenas orquestra a sequência.
 
@@ -173,13 +173,13 @@ O **MVC** é um padrão arquitetural que divide a aplicação em três camadas c
 
 ```
 View (frmPrincipal)
-    ↓ chama
+    â†“ chama
 Controller (Controle)
-    ↓ delega para
+    â†“ delega para
 Model (Validacao + Calculos)
-    ↓ retorna resultado para
+    â†“ retorna resultado para
 Controller
-    ↓ devolve String para
+    â†“ devolve String para
 View
 ```
 
@@ -236,7 +236,7 @@ O construtor recebe dois parâmetros:
 lblPrimeiroNumero = new javax.swing.JLabel();
 lblPrimeiroNumero.setText("Digite primeiro número");
 ```
-`JLabel` exibe um texto estático na tela. É usado para identificar os campos de entrada e para mostrar o resultado final (`lblResultado`).
+`JLabel` exibe um texto estático na tela. Ã‰ usado para identificar os campos de entrada e para mostrar o resultado final (`lblResultado`).
 
 ### `JTextField` — campos de entrada de texto
 ```java
@@ -262,19 +262,19 @@ O fluxo de uma operação segue este caminho:
 
 ```
 Usuário clica em "Somar"
-        ↓
+        â†“
 frmPrincipal.btnSomarActionPerformed()
-        ↓
+        â†“
 frmPrincipal.calcular("+")
-        ↓
+        â†“
 Controle.executar(num1, num2, "+")
-        ↓
-Validacao(num1, num2, "+")   →  valida os dados
-        ↓ (se válido)
-Calculos(n1, n2, "+")        →  calcula o resultado
-        ↓
+        â†“
+Validacao(num1, num2, "+")   â†’  valida os dados
+        â†“ (se válido)
+Calculos(n1, n2, "+")        â†’  calcula o resultado
+        â†“
 resultado volta para frmPrincipal
-        ↓
+        â†“
 lblResultado.setText(resultado)
 ```
 
@@ -412,7 +412,7 @@ O **construtor** é um método especial de uma classe que é executado **automat
 Características do construtor:
 - Tem **o mesmo nome da classe**.
 - **Não possui tipo de retorno** (nem `void`).
-- É chamado uma única vez, no momento da criação do objeto.
+- Ã‰ chamado uma única vez, no momento da criação do objeto.
 
 Exemplos deste projeto:
 
@@ -460,7 +460,7 @@ Exemplo correto (com `this`):
 ```java
 public Calculos(Double n1, Double n2, String op)
 {
-    this.n1 = n1; // this.n1 → atributo da classe | n1 → parâmetro recebido
+    this.n1 = n1; // this.n1 â†’ atributo da classe | n1 â†’ parâmetro recebido
     this.n2 = n2;
     this.op = op;
 }
@@ -497,4 +497,5 @@ Calculos calculos       = new Calculos(validacao.getN1(), validacao.getN2(), op)
 ```
 
 Os **parâmetros** são valores passados ao construtor da classe para que o objeto seja criado já com as informações necessárias para funcionar. Cada classe decide quais parâmetros precisa declarando-os no seu construtor.
+
 
