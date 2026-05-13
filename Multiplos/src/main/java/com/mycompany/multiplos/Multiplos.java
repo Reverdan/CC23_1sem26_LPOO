@@ -1,16 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.multiplos;
 
-/**
- *
- * @author Rever
- */
-public class Multiplos {
+import com.mycompany.multiplos.apresentacao.frmPrincipal;
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+public class Multiplos 
+{
+    public static void main(String[] args) 
+    {
+        frmPrincipal frmP = new frmPrincipal(null, true);
+        frmP.setVisible(true);
     }
 }
